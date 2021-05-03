@@ -11,5 +11,4 @@ const sort = (arr) => {
   };
 };
 
-console.log(sort([5, 1]).insertionSort());
 module.exports = sort;

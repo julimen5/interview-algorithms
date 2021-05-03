@@ -1,5 +1,5 @@
 const bubSort = (array) => ({
-    /**
+  /**
      * No validation is being done. Asumming it's an array of numbers
      * The idea behind this algorithms is to compare each number with the next of the array
      * and swap it if the condition is true. It's the same idea as the selection algorithm.
