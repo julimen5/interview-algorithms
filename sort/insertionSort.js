@@ -1,5 +1,3 @@
-const sort = require('./sort');
-
 const inSort = (array) => ({
   /**
      * This is an stable sorting algorithm that consist in compare the key number
