@@ -10,14 +10,6 @@ describe('Testing sort', () => {
     expect(sorted.selectionSort([6, 3, 4, 2, 1, 5], 'desc')).toStrictEqual([6, 5, 4, 3, 2, 1]);
     done();
   });
-  it('Should return ordered by selection no inplace sort', (done) => {
-    expect(sorted.selectionNoPlaceSort([6, 3, 4, 2, 1, 5])).toStrictEqual([1, 2, 3, 4, 5, 6]);
-    expect(sorted.selectionNoPlaceSort([6, 3, 4, 2, 1, 5, 1, 4, 5])).toStrictEqual([
-      1, 1, 2, 3, 4,
-      4, 5, 5, 6,
-    ]);
-    done();
-  });
   it('Should return oreder by bubleSort', () => {
     expect(sorted.bubbleSort([6, 3, 4, 2, 1, 5])).toStrictEqual([1, 2, 3, 4, 5, 6]);
   });

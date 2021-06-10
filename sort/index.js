@@ -10,5 +10,4 @@ const sort = {
   ...mergeSort,
 };
 
-console.log(mergeSort.mergeSort([5, 4, 3, 2, 1]));
 module.exports = sort;

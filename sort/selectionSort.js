@@ -1,32 +1,4 @@
 /**
-     * We are supposing that we receive an array of numbers.
-     * No validation is done.
-     * This method is not the orginal, it's not an in-place algorithms
-     * Just a new way to do it using functional programing.
-     * @returns Array of sorted numbers
-     */
-const selectionNoPlaceSort = (array) => {
-  const sorted = array;
-  array.forEach((element, i) => {
-    const tempArray = sorted.slice(i + 1, sorted.length + 1);
-    let minPosition = i;
-    // this delta represents how much we are moving from the original array (sorted)
-    const delta = sorted.length - tempArray.length;
-    tempArray.forEach((e, j) => {
-      if (e < sorted[minPosition]) {
-        minPosition = delta + j;
-      }
-    });
-    if (minPosition !== i) {
-      const tempValue = sorted[i];
-      sorted[i] = sorted[minPosition];
-      sorted[minPosition] = tempValue;
-    }
-  });
-  return sorted;
-};
-
-/**
    * No validation is being done. Asuming it's an array of numbers
    * selection sort is an in-place comparison sorting algorithm.
    * It's inefficient for large lists.
@@ -62,5 +34,4 @@ const selectionSort = (array, order) => {
 
 module.exports = {
   selectionSort,
-  selectionNoPlaceSort,
 };

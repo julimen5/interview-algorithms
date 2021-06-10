@@ -4,8 +4,9 @@ logs
 npm-debug.log*
 
 # Coverage directory used by tools like istanbul
-coverage
+coverage/
 *.lcov
+.idea
 
 
 # Dependency directories
