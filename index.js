@@ -1,3 +1,5 @@
 const sort = require('./sort');
 
-module.exports = { sort };
+module.exports = {
+  sort,
+};

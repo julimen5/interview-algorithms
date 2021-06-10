@@ -1,34 +1,32 @@
-const selSort = (array) => ({
-
-  /**
+/**
      * We are supposing that we receive an array of numbers.
      * No validation is done.
      * This method is not the orginal, it's not an in-place algorithms
      * Just a new way to do it using functional programing.
      * @returns Array of sorted numbers
      */
-  selectionNoPlaceSort: () => {
-    const sorted = array;
-    array.forEach((element, i) => {
-      const tempArray = sorted.slice(i + 1, sorted.length + 1);
-      let minPosition = i;
-      // this delta represents how much we are moving from the original array (sorted)
-      const delta = sorted.length - tempArray.length;
-      tempArray.forEach((e, j) => {
-        if (e < sorted[minPosition]) {
-          minPosition = delta + j;
-        }
-      });
-      if (minPosition !== i) {
-        const tempValue = sorted[i];
-        sorted[i] = sorted[minPosition];
-        sorted[minPosition] = tempValue;
+const selectionNoPlaceSort = (array) => {
+  const sorted = array;
+  array.forEach((element, i) => {
+    const tempArray = sorted.slice(i + 1, sorted.length + 1);
+    let minPosition = i;
+    // this delta represents how much we are moving from the original array (sorted)
+    const delta = sorted.length - tempArray.length;
+    tempArray.forEach((e, j) => {
+      if (e < sorted[minPosition]) {
+        minPosition = delta + j;
       }
     });
-    return sorted;
-  },
+    if (minPosition !== i) {
+      const tempValue = sorted[i];
+      sorted[i] = sorted[minPosition];
+      sorted[minPosition] = tempValue;
+    }
+  });
+  return sorted;
+};
 
-  /**
+/**
    * No validation is being done. Asuming it's an array of numbers
    * selection sort is an in-place comparison sorting algorithm.
    * It's inefficient for large lists.
@@ -43,24 +41,26 @@ const selSort = (array) => ({
    * Stable = No
    * @returns Array of sorted numbers
    */
-  selectionSort: (order) => {
-    const sorted = array;
-    for (let i = 0; i < sorted.length - 1; i++) {
-      let position = i;
-      for (let j = i + 1; j < array.length; j++) {
-        if (order === 'asc' && sorted[j] < sorted[position]) {
-          position = j;
-        }
-        if (order === 'desc' && sorted[j] > sorted[position]) position = j;
+const selectionSort = (array, order) => {
+  const sorted = array;
+  for (let i = 0; i < sorted.length - 1; i++) {
+    let position = i;
+    for (let j = i + 1; j < array.length; j++) {
+      if (order === 'asc' && sorted[j] < sorted[position]) {
+        position = j;
       }
-      if (position !== i) {
-        const tempValue = sorted[i];
-        sorted[i] = sorted[position];
-        sorted[position] = tempValue;
-      }
+      if (order === 'desc' && sorted[j] > sorted[position]) position = j;
     }
-    return sorted;
-  },
-});
+    if (position !== i) {
+      const tempValue = sorted[i];
+      sorted[i] = sorted[position];
+      sorted[position] = tempValue;
+    }
+  }
+  return sorted;
+};
 
-module.exports = selSort;
+module.exports = {
+  selectionSort,
+  selectionNoPlaceSort,
+};

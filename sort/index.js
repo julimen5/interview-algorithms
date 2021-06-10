@@ -1,14 +1,14 @@
 const selSort = require('./selectionSort');
 const bubSort = require('./bubbleSort');
 const inSort = require('./insertionSort');
+const mergeSort = require('./mergeSort');
 
-const sort = (arr) => {
-  const array = arr;
-  return {
-    ...selSort(array),
-    ...bubSort(array),
-    ...inSort(array),
-  };
+const sort = {
+  ...selSort,
+  ...bubSort,
+  ...inSort,
+  ...mergeSort,
 };
 
+console.log(mergeSort.mergeSort([5, 4, 3, 2, 1]));
 module.exports = sort;

@@ -9,13 +9,15 @@ Another list of interest algorithms to prepare for an interview in js
     * no in place
     * common
 * Insertion sort 
+* Merge sort
 
 #### Usage 
 
 ```JavaScript
 const { sort } = require('./index');
-const sortObject = sort([4,32,5,6,1]);
-const bubbleSorted = sortObject.bubbleSort();
-const selectionNoPlaceSorted = sortObject.selectionNoPlaceSort();
-const selectionSorted = sortObject.selectionSort();
+const bubbleSorted = sort.bubbleSort([5,4,3,2,1]);
+const selectionNoPlaceSorted = sort.selectionNoPlaceSort([5,4,3,2,1]);
+const selectionSorted = sort.selectionSort([5,4,3,2,1]);
+const insertionSorted = sort.insertionSort([5,4,3,2,1]);
+const mergeSorted = sort.mergeSort([5,4,3,2,1]);
 ```

@@ -1,5 +1,4 @@
-const bubSort = (array) => ({
-  /**
+/**
      * No validation is being done. Asumming it's an array of numbers
      * The idea behind this algorithms is to compare each number with the next of the array
      * and swap it if the condition is true. It's the same idea as the selection algorithm.
@@ -9,19 +8,20 @@ const bubSort = (array) => ({
      * Stable = yes
      * @returns Array of sorted numbers
      */
-  bubbleSort: () => {
-    const sorted = array;
-    for (let i = 0; i < sorted.length; i++) {
-      for (let j = 0; j < sorted.length; j++) {
-        if (sorted[j] > sorted[j + 1]) {
-          // swap
-          const tempValue = sorted[j];
-          sorted[j] = sorted[j + 1];
-          sorted[j + 1] = tempValue;
-        }
+const bubbleSort = (array) => {
+  const sorted = array;
+  for (let i = 0; i < sorted.length; i++) {
+    for (let j = 0; j < sorted.length; j++) {
+      if (sorted[j] > sorted[j + 1]) {
+        // swap
+        const tempValue = sorted[j];
+        sorted[j] = sorted[j + 1];
+        sorted[j + 1] = tempValue;
       }
     }
-    return sorted;
-  },
-});
-module.exports = bubSort;
+  }
+  return sorted;
+};
+module.exports = {
+  bubbleSort,
+};
