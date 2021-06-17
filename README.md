@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # interview-algorithms
 Another list of interest algorithms to prepare for an interview in js
 
