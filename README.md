@@ -22,3 +22,15 @@ const mergeSorted = sort.mergeSort([5,4,3,2,1]);
 const quickSorted = sort.quickSort([5,4,3,2,1], 0, 4);
 
 ```
+
+## Algorithms
+
+### Searching
+* Linear search
+
+#### Usage
+```JavaScript
+const { search } = require('./index');
+const linearSearched = search.linearSearch([5,4,3,2,1], 4);
+
+```
