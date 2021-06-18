@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Build Status](https://travis-ci.com/julimen5/interview-algorithms.svg?branch=main)](https://travis-ci.com/julimen5/interview-algorithms)
 
 # interview-algorithms
 Another list of interest algorithms to prepare for an interview in js
