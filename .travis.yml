@@ -3,3 +3,5 @@ node_js:
   - 12.14.1
 before_install:
   - npm install -g codecov
+script:
+  - codecov
