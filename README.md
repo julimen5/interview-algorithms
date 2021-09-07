@@ -27,8 +27,6 @@ const quickSorted = sort.quickSort([5,4,3,2,1], 0, 4);
 
 ```
 
-## Algorithms
-
 ### Searching
 * Linear search
 
@@ -37,4 +35,14 @@ const quickSorted = sort.quickSort([5,4,3,2,1], 0, 4);
 const { search } = require('./index');
 const linearSearched = search.linearSearch([5,4,3,2,1], 4);
 
+```
+
+### Graphs
+* BFS
+
+#### Usage
+
+```javascript
+const { graph } = require('./index');
+const bfs = graph.bfs(3, 7, [[1, 2], [2, 3], [3, 4], [4, 5], [7, 8]]);
 ```
