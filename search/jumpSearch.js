@@ -33,7 +33,7 @@ const findBlock = (arr, length, jump, key) => {
   // following with the example
   while(arr[start] < key) {
     start += 1;
-    if(!arr[start]) // we reach the final of the array and it's not present
+    if(start === Math.min(currentJump, length)) // if we reached the next block or the end of the array, the target doesn't exists
       return -1
   }
   return start;
