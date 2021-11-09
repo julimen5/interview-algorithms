@@ -30,6 +30,7 @@ const quickSorted = sort.quickSort([5,4,3,2,1], 0, 4);
 ### Searching
 * Linear search
 * Jump search
+<<<<<<< HEAD
 * Binary search
 
 #### Usage
@@ -49,3 +50,4 @@ const jumpSearched = search.binarySearch([1,2,3,4,5], 2);
 const { graph } = require('./index');
 const bfs = graph.bfs(3, 7, [[1, 2], [2, 3], [3, 4], [4, 5], [7, 8]]);
 ```
+
