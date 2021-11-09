@@ -29,12 +29,15 @@ const quickSorted = sort.quickSort([5,4,3,2,1], 0, 4);
 
 ### Searching
 * Linear search
+* Jump search
+* Binary search
 
 #### Usage
 ```JavaScript
 const { search } = require('./index');
 const linearSearched = search.linearSearch([5,4,3,2,1], 4);
-
+const jumpSearched = search.jumpSearch([1,2,3,4,5], 2, 1);
+const jumpSearched = search.binarySearch([1,2,3,4,5], 2);
 ```
 
 ### Graphs
