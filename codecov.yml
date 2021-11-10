@@ -6,6 +6,9 @@ coverage:
   round: up
   range: 70...90
   status:
+    patch:
+      default:
+        target: 95%
     project:
       default: # This can be anything, but it needs to exist as the name
         # basic settings
